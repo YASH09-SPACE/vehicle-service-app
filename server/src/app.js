@@ -8,8 +8,8 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-app.get('/api/v1/ping', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ ok: true, message: 'Server is running!' });
 });
 
-module.exports = app;
+module.exports = app; // ONLY export the app here
